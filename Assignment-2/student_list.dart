@@ -1,8 +1,12 @@
+import 'dart:io';
+
 void main(){
   List<String> students = ["Tonmoy", "Rafi","Ali","Nafis"];
   bool newStudent = true;
   String? name;
-  name = "Rahim";
+  print("Students : $students");
+  print("Enter new Student: ");
+  name = stdin.readLineSync()?? "";
   if(students.contains(name)) newStudent=false;
   List<String> newStudentList = [];
   newStudentList = [
@@ -18,7 +22,8 @@ void main(){
     "Rafi": "21",
     "Rahat": "22",
     "Ali": "27",
-    "Nafis": "24",
+    "Nafis": "20",
+    if(newStudent) name: "24",
   };
   print("Student ages");
   studentMap.forEach((names,age)=> print("$names -> $age"));
